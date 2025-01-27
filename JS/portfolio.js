@@ -1,50 +1,51 @@
-(() => {
+const canvas = document.getElementById('backgroundCanvas');
+const ctx = canvas.getContext('2d');
 
-    setInterval(function(){
-        document.getElementById("clock").innerHTML = new Date().toLocaleString();
-    },1000);
-
-    const canvas = document.getElementById(`backgroundCanvas`);
-    const ctx = canvas.getContext(`2d`);
-
-    function resizeCanvas(){
-        canvas.width=windows.innerWidth;
-        canvas.height=window.innerHeight;
+// サイズを設定
+    function resizeCanvas() {
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
     }
     resizeCanvas();
-    window.addEventListener('resize',resiCanvas);
+    window.addEventListener('resize', resizeCanvas);
 
-    const sircles = [];
+// アニメーション用の円の設定
+    const circles = [];
     const circleCount = 50;
 
-    for (let i = 0; i < circleCount; i++){
+    for (let i = 0; i < circleCount; i++) {
         circles.push({
-            x: Mathrandom() * canvas.width,
-            y; Math.rndom() * canvas.heigth.height,
+            x: Math.random() * canvas.width,
+            y: Math.random() * canvas.height,
             radius: Math.random() * 5 + 2,
             xSpeed: Math.random() * 2 - 1,
             ySpeed: Math.random() * 2 - 1,
-            color: `rgba(${Math.floor(Math.random() * 255)}, ${Math.floor(Math.floor(Math.random() * 255)}, 0.8)`
+            color: 'rgba(' + Math.floor(Math.random() * 255) + ', ' + Math.floor(Math.random() * 255) + ', ' + Math.floor(Math.random() * 255) + ', 0.8)'
         });
     }
 
-    function draw(){
-        ctx.clearRect(0, 0,canvas.width.rdius,0,Math.PI * 2);
-        
-        circles.forEach(cercle => {
-            ctx.beginPath();
-            stx.arc(circle.x,circle.y,circle.radius,0,Math.PI * 2);
-            ctx.fillStyle = circle.color;
-            ctx.fill();
+// 描画関数
+    function draw() {
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
 
-            circle.x += circle.xSpeed;
-            circle.y += circle.ySpeed;
+    circles.forEach(circle => {
+        // 円を描画
+        ctx.beginPath();
+        ctx.arc(circle.x, circle.y, circle.radius, 0, Math.PI * 2);
+        ctx.fillStyle = circle.color;
+        ctx.fill();
 
-            if (circle.x < 0 || circle.x > canvas.width) circle.xSpeed *= -1;
-            if (circle.y < 0 || circle.y > canvas.height)circle.ySpeed *= -1;
-        });
+        // 位置を更新
+        circle.x += circle.xSpeed;
+        circle.y += circle.ySpeed;
 
-        requestAnimationFrame(draw);
+        // 境界を超えた場合の処理
+        if (circle.x < 0 || circle.x > canvas.width) circle.xSpeed *= -1;
+        if (circle.y < 0 || circle.y > canvas.height) circle.ySpeed *= -1;
+    });
+
+    requestAnimationFrame(draw);
     }
+
+// アニメーション開始
     draw();
-})();
