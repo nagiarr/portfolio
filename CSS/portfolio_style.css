@@ -32,6 +32,9 @@
 }
 
 .table{
+  border-collapse: collapse;
+  border-spacing: 0;
+  border:none;
   th{
     background-color:#c0c0c0
   }
