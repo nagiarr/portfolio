@@ -12,6 +12,9 @@
     border-color:rgb(150, 150, 150);
     border-width:1px;
   }
+  h3{
+    margin:1rem;
+  }
 }
 
 .backgroundCanvas {
@@ -28,6 +31,27 @@
   height: 5rem;
 }
 
-.table-basicInfo{
-  
+.table{
+  th{
+    background-color:#c0c0c0
+  }
+  tr:nth-child(even){
+    background-color:#dcdcdc
+  }
+  tr:nth-child(odd){
+    background-color:#f5f5f5
+  }
+
+}
+
+.workExperience table.coresys,
+.workExperience table.polyTech {
+  border-collapse: collapse;
+  border-spacing: 0;
+  border: 2px solid black;
+}
+
+.workExperience table.coresys *,
+.workExperience table.polyTech * {
+  border: 2px solid black;
 }
