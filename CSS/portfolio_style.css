@@ -21,10 +21,12 @@
       tr:nth-child(odd){
         background-color:#023642;
       }
-      tbody{
-        th{
-        background-color:#e41a1ae3;
+
+      th{
+        background-color:rgba(30, 34, 234, 0.936)
       }
+
+      tbody{
       }
 
     }
