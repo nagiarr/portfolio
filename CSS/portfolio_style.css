@@ -6,6 +6,10 @@
 } */
 
 @media(prefers-color-scheme:dark){
+  nav{
+    background-color:#2a2a2a;
+    color:#dbdbdb;
+  }
   body{
     background-color:#2a2a2a;
     color:#dbdbdb;
