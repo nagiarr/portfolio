@@ -57,6 +57,9 @@
   }
 }
 
+nav{
+  display:flex;
+}
 .main{
   margin:1rem;
   h2{
