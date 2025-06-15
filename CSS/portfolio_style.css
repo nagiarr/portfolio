@@ -61,6 +61,12 @@ nav{
   padding-top: 5px;
   box-sizing:border-box;
 
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color:rgb(150, 150, 150);
+
   a:hover{
     color: black;
   }
@@ -80,6 +86,10 @@ nav{
 }
 .main{
   margin:1rem;
+  padding-top:1rem;
+  padding-bottom:3rem;
+  box-sizing:border-rem;
+
   h2{
     border-bottom:solid;
     border-color:rgb(150, 150, 150);
