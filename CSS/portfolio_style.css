@@ -5,6 +5,10 @@
   height: 100%;
 } */
 
+html{
+  scroll-behavior:smooth;
+}
+
 @media(prefers-color-scheme:dark){
   nav{
     background-color:#2a2a2a;
