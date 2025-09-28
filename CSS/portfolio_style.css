@@ -14,18 +14,16 @@ html{
     background-color:#2a2a2a;
     color:#dbdbdb;
   }
+
+  .main  .qrcode  #qrcode_img{
+    filter:invert(1);
+  }
+
   body{
     background-color:#2a2a2a;
     color:#dbdbdb;
     
-    .main .qrcode{
-      .qrcode{
-        filter:invert(1);
-      }
-    }
-    
-
-    .table{
+    language_table{
       border-collapse: collapse;
       border-spacing: 0;
       border:none;
@@ -102,12 +100,16 @@ nav{
   z-index:-1;
 }
 
-.qrcode {
+.main > .qrcode > #qrcode_img{
   width: 5rem;
   height: 5rem;
 }
 
-.table{
+.basicInfo_table,
+.qualification_table,
+.language_table,
+.environment_table
+{
   border-collapse: collapse;
   border-spacing: 0;
   border:none;
