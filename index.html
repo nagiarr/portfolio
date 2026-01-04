@@ -20,8 +20,33 @@
     
   <div class="main">
     <section class="greet">
-      <h1>Welcome!!</h1>
     </section>
+  </div>
+
+  <div id="output"></div>
+  <script type="application/json" id="my-json">
+    {
+      "title": "プロフィール",
+      "name": "柳町 有俊"
+    }
+  </script>
+
+  <script>
+    const jsonText = document.getElementById('my-json').textContent;
+    const data = JSON.parse(jsonText);
+
+    document.getElementById('output').innerHTML = data.title;
+  </script>
+</body>
+</html>
+  
+  <!-- <script>
+    const jsonText = {
+      "title": "プロフィール",
+      "name": "柳町 有俊"
+    };
+    console.log(jsonText);
+  </script> -->
 
     <section class="qrcode">
       <img id="qrcode_img" 
