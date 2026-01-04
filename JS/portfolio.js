@@ -1,3 +1,9 @@
+const workExperienceDetailPanel = () => {
+  window.open('test', "subwin", 'width=500,height=500');
+};
+
+
+
 const canvas = document.getElementById('backgroundCanvas');
 const ctx = canvas.getContext('2d');
 
