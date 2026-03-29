@@ -17,7 +17,7 @@
       <li><a href="#workExperience">職務経歴</a></li>
     </ul>
   </nav>
-    
+  <div id = "welcome">aaaa</div>
   <div class="main">
     <section class="greet">
       <h1>Welcome!!</h1>
@@ -392,6 +392,20 @@
 
   <script src="./JS/portfolio.js" defer></script>
   <script src="./JS/insertText.js" defer></script>
+    document.addEventListener('DOMContentLoaded', () => {
+
+    fetch('./data/profile.json')
+      .then(response => response.json())
+      .then(profile => {
+        const arr = document.getElementById('welcome');
+        arr.textContent = profile.name ;
+      })
+      .catch(error => {
+        console.error('Error:', error);
+      });
+
+    });
+  </script>
   <canvas class="backgroundCanvas"></canvas>
 </body>
 </html>
