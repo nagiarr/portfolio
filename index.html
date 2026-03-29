@@ -17,7 +17,7 @@
       <li><a href="#workExperience">職務経歴</a></li>
     </ul>
   </nav>
-  <div id = "welcome">aaaa</div>
+  <div>aaaa</div>
   <div class="main">
     <section class="greet">
       <h1>Welcome!!</h1>
@@ -34,27 +34,23 @@
       <table class="basicInfo_table">
         <tr>
           <th>名前</th>
-          <td>柳町 有俊（やなぎまち ありとし）</td>
+          <td id="name"></td>
         </tr>
         <tr>
-          <th>生年月日</th>
-          <td>1988年（2026年1月現在 37歳）</td>
+          <th>生まれた年</th>
+          <td id="date_of_birth"></td>
         </tr>
         <tr>
           <th>居住地</th>
-          <td>福井県鯖江市</td>
+          <td id="address"></td>
         </tr>
         <tr>
           <th>出身地</th>
-          <td>山形県</td>
+          <td id="site_of_birth"></td>
         </tr>
         <tr>
           <th>趣味</th>
-          <td>カラオケ、食べ歩き、水泳、将棋、人狼</td>
-        </tr>
-        <tr>
-          <th>出身大学</th>
-          <td>石巻専修大学 理工学部 基礎理学科（2011年卒）</td>
+          <td id="refresh"></td>
         </tr>
         
       </table>
@@ -392,20 +388,8 @@
 
   <script src="./JS/portfolio.js" defer></script>
   <script src="./JS/insertText.js" defer></script>
-    document.addEventListener('DOMContentLoaded', () => {
-
-    fetch('./data/profile.json')
-      .then(response => response.json())
-      .then(profile => {
-        const arr = document.getElementById('welcome');
-        arr.textContent = profile.name ;
-      })
-      .catch(error => {
-        console.error('Error:', error);
-      });
-
-    });
-  </script>
+  <script src="./JS/insertText.js" defer></script>
+    
   <canvas class="backgroundCanvas"></canvas>
 </body>
 </html>

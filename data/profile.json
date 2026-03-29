@@ -1,4 +1,11 @@
 {
-    "name":"柳町 有俊",
-    "yomi":"やなぎまち ありとし"
+    "profile_data": {
+        "name":"柳町 有俊",
+        "yomi":"やなぎまち ありとし",
+        "date_of_birth":"1988年",
+        "address":"福井県鯖江市",
+        "site_of_birth":"山形県米沢市",
+        "refresh":"カラオケ、食べ歩き、水泳、将棋、人狼"
+    }
+
 }
