@@ -100,7 +100,7 @@ nav{
   z-index:-1;
 }
 
-.main > .qrcode > #qrcode_img{
+.main > .qrcode > #qrcode_img, #qrcode_img_javaWebApp{
   width: 5rem;
   height: 5rem;
 }
