@@ -1,140 +1,169 @@
-/* body, html {
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-  height: 100%;
-} */
-
-html{
-  scroll-behavior:smooth;
+/* スムーススクロール */
+html {
+scroll-behavior: smooth;
 }
 
-@media(prefers-color-scheme:dark){
-  nav{
-    background-color:#2a2a2a;
-    color:#dbdbdb;
-  }
-
-  .main  .qrcode  #qrcode_img{
-    filter:invert(1);
-  }
-
-  body{
-    background-color:#2a2a2a;
-    color:#dbdbdb;
-    
-    language_table{
-      border-collapse: collapse;
-      border-spacing: 0;
-      border:none;
-      
-      tr:nth-child(even){
-        background-color:#012330;
-      }
-      tr:nth-child(odd){
-        background-color:#023642;
-      }
-
-      th{
-        background-color:rgba(30, 34, 234, 0.936)
-      }
-
-    }
-
-    .workExperience table.aspark ,
-    .workExperience table.coresys,
-    .workExperience table.polyTech {
-      border-collapse: collapse;
-      border-spacing: 0;
-      border: 2px solid rgb(206, 206, 206);
-    }
-
-    .workExperience table.aspark *,
-    .workExperience table.coresys *,
-    .workExperience table.polyTech * {
-      border: 2px solid rgb(206, 206, 206);
-    }
-
-  }
+/* =====================
+ナビゲーション
+===================== */
+nav {
+padding-top: 5px;
+box-sizing: border-box;
 }
 
-nav{
-  padding-top: 5px;
-  box-sizing:border-box;
-
-  a:hover{
-    color: black;
-  }
-
-  ul{
-    display:flex;
-  }
-  li{
-    list-style:none;
-  }
-  a{
-    display: block;
-    text-decoration:none;
-    color: white;
-    margin-right: 35px;
-  }
-}
-.main{
-  margin:1rem;
-  h2{
-    border-bottom:solid;
-    border-color:rgb(150, 150, 150);
-    border-width:1px;
-  }
-  h3{
-    margin:1rem;
-  }
+nav ul {
+display: flex;
 }
 
+nav li {
+list-style: none;
+}
+
+nav a {
+display: block;
+text-decoration: none;
+color: white;
+margin-right: 35px;
+}
+
+nav a:hover {
+color: black;
+}
+
+/* =====================
+メイン
+===================== */
+.main {
+margin: 1rem;
+}
+
+.main h2 {
+border-bottom: 1px solid rgb(150, 150, 150);
+}
+
+.main h3 {
+margin: 1rem;
+}
+
+/* =====================
+背景キャンバス
+===================== */
 .backgroundCanvas {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index:-1;
+position: fixed;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+z-index: -1;
 }
 
-.main > .qrcode > #qrcode_img, #qrcode_img_javaWebApp{
-  width: 5rem;
-  height: 5rem;
+/* =====================
+QRコード（サイズ統一）
+===================== */
+.qrcode img {
+width: 5rem;
+height: 5rem;
+object-fit: contain;
 }
 
+/* =====================
+テーブル共通
+===================== */
 .basicInfo_table,
 .license_table,
 .language_table,
-.environment_table
-{
-  border-collapse: collapse;
-  border-spacing: 0;
-  border:none;
-  th{
-    background-color:#c0c0c0;
-  }
-  tr:nth-child(even){
-    background-color:#dcdcdc;
-  }
-  tr:nth-child(odd){
-    background-color:#f5f5f5;
-  }
-
+.environment_table {
+border-collapse: collapse;
+border-spacing: 0;
+border: none;
 }
 
+.basicInfo_table th,
+.license_table th,
+.language_table th,
+.environment_table th {
+background-color: #c0c0c0;
+}
+
+.basicInfo_table tr:nth-child(even),
+.license_table tr:nth-child(even),
+.language_table tr:nth-child(even),
+.environment_table tr:nth-child(even) {
+background-color: #dcdcdc;
+}
+
+.basicInfo_table tr:nth-child(odd),
+.license_table tr:nth-child(odd),
+.language_table tr:nth-child(odd),
+.environment_table tr:nth-child(odd) {
+background-color: #f5f5f5;
+}
+
+/* =====================
+職務経歴テーブル
+===================== */
 .workExperience table.aspark,
 .workExperience table.coresys,
 .workExperience table.polyTech {
-  border-collapse: collapse;
-  border-spacing: 0;
-  border: 2px solid black;
+border-collapse: collapse;
+border-spacing: 0;
+border: 2px solid black;
 }
 
 .workExperience table.aspark *,
 .workExperience table.coresys *,
 .workExperience table.polyTech * {
-  border: 2px solid black;
+border: 2px solid black;
+}
+
+/* =====================
+ダークモード
+===================== */
+@media (prefers-color-scheme: dark) {
+body {
+background-color: #2a2a2a;
+color: #dbdbdb;
+}
+
+nav {
+background-color: #2a2a2a;
+color: #dbdbdb;
+}
+
+.qrcode img {
+filter: invert(1);
+}
+
+.basicInfo_table th,
+.license_table th,
+.language_table th,
+.environment_table th {
+background-color: #1e22ea;
+}
+
+.basicInfo_table tr:nth-child(even),
+.license_table tr:nth-child(even),
+.language_table tr:nth-child(even),
+.environment_table tr:nth-child(even) {
+background-color: #012330;
+}
+
+.basicInfo_table tr:nth-child(odd),
+.license_table tr:nth-child(odd),
+.language_table tr:nth-child(odd),
+.environment_table tr:nth-child(odd) {
+background-color: #023642;
+}
+
+.workExperience table.aspark,
+.workExperience table.coresys,
+.workExperience table.polyTech {
+border: 2px solid rgb(206, 206, 206);
+}
+
+.workExperience table.aspark *,
+.workExperience table.coresys *,
+.workExperience table.polyTech * {
+border: 2px solid rgb(206, 206, 206);
+}
 }
