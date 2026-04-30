@@ -21,8 +21,9 @@
    */
   
   body {
-    margin: 0;
-  }
+  margin: 0;
+  padding-top: 60px; /* navの高さ分ずらす */
+}
   
   /**
    * Render the `main` element consistently in IE.
