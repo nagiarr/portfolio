@@ -60,6 +60,14 @@ z-index: -1;
 /* =====================
 QRコード（サイズ統一）
 ===================== */
+
+.qrcode {
+  display: flex;
+  gap: 2rem;
+  justify-content: start;
+  align-items: center;
+}
+
 .qrcode img {
 width: 5rem;
 height: 5rem;
