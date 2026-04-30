@@ -1,0 +1,51 @@
+/* =====================
+ダークモード
+===================== */
+@media (prefers-color-scheme: dark) {
+body {
+background-color: #2a2a2a;
+color: #dbdbdb;
+}
+
+nav {
+background-color: #2a2a2a;
+color: #dbdbdb;
+}
+
+.qrcode img {
+filter: invert(1);
+}
+
+.basicInfo_table th,
+.license_table th,
+.language_table th,
+.environment_table th {
+background-color: #1e22ea;
+}
+
+.basicInfo_table tr:nth-child(even),
+.license_table tr:nth-child(even),
+.language_table tr:nth-child(even),
+.environment_table tr:nth-child(even) {
+background-color: #012330;
+}
+
+.basicInfo_table tr:nth-child(odd),
+.license_table tr:nth-child(odd),
+.language_table tr:nth-child(odd),
+.environment_table tr:nth-child(odd) {
+background-color: #023642;
+}
+
+.workExperience table.aspark,
+.workExperience table.coresys,
+.workExperience table.polyTech {
+border: 2px solid rgb(206, 206, 206);
+}
+
+.workExperience table.aspark *,
+.workExperience table.coresys *,
+.workExperience table.polyTech * {
+border: 2px solid rgb(206, 206, 206);
+}
+}
